@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body data-bs-theme="light">
+    <div class="container d-flex flex-column">
+      <h1 class="bg-info py-3 text-center">InstaPay</h1>
+      <div class="d-flex gap-3 align-items-center">
+        <h2>Your Balance is : <span id="balanceSpan">*******</span></h2>
+        <button onclick="showBalance()" class="btn btn-dark">
+          Show Balance
+        </button>
+
+        <button class="btn btn-info" onclick="renderTransactions()">
+          Show History
+        </button>
+      </div>
+      <div class="d-flex gap-3">
+        <input id="amountInput" placeholder="Enter Amount" type="number" />
+        <button class="btn btn-danger" onclick="withdarwAmount()">
+          Withdraw
+        </button>
+        <button class="btn btn-success" onclick="depositAmount()">
+          Deposit
+        </button>
+      </div>
+      <table class="table table-dark mt-4">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Before Balance</th>
+            <th>Transaction Type</th>
+            <th>Transaction Amount</th>
+            <th>After Balance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td>1</td>
+            <th>0</th>
+            <th>Deposit</th>
+            <th>2000</th>
+            <th>2000</th>
+          </tr>
+          <tr>
+            <td>2</td>
+            <th>2000</th>
+            <th>Deposit</th>
+            <th>2000</th>
+            <th>4000</th>
+          </tr>
+          <tr>
+            <td>3</td>
+            <th>4000</th>
+            <th>Deposit</th>
+            <th>2000</th>
+            <th>6000</th>
+          </tr>
+          <tr>
+            <td>4</td>
+            <th>6000</th>
+            <th>Withdarw</th>
+            <th>1000</th>
+            <th>5000</th>
+          </tr> -->
+        </tbody>
+        <tfoot></tfoot>
+      </table>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
