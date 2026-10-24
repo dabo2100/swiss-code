@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css"
+      integrity="sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./loign.css" />
+  </head>
+  <body class="d-flex justify-content-center align-items-center">
+    <form
+      class="bg-white rounded shadow border gap-3 p-4 d-flex flex-column bg-white col-4"
+    >
+      <h3>Welcome back please login</h3>
+      <input
+        id="inputEmail"
+        class="form-control"
+        type="email"
+        placeholder="enter your email"
+        required
+      />
+      <div class="position-relative d-flex align-items-center">
+        <input
+          class="form-control"
+          type="password"
+          id="inputPassword"
+          placeholder="enter your password"
+          required
+          minlength="4"
+          maxlength="36"
+        />
+        <img id="eyeIcon" src="./Screenshot 2026-10-24 221020.png" alt="" />
+      </div>
+
+      <button class="btn btn-primary">
+        Click Me
+      </button>
+    </form>
+
+    <script src="./login.js"></script>
+  </body>
+</html>
+
+<!-- 
+  submit 
+-->

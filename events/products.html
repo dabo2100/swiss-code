@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css"
+      integrity="sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="bg-info text-center py-4">This is our products</h1>
+
+      <button
+        class="btn btn-success"
+        data-bs-toggle="modal"
+        data-bs-target="#newPhoneModal"
+      >
+        Add New Phone
+      </button>
+
+      <butto class="btn btn-primary" onclick="window.location.href='./login.html'">LogOut</butto>
+
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Qty</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="newPhoneModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Add New Phone
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex flex-column gap-4">
+            <input
+              class="form-control"
+              id="phoneInputName"
+              type="text"
+              placeholder="Enter your phone name"
+            />
+            <input
+              class="form-control"
+              id="phoneInputPrice"
+              type="number"
+              placeholder="Enter your phone price"
+            />
+            <input
+              class="form-control"
+              id="phoneInputQty"
+              type="number"
+              placeholder="Enter your phone qty"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="btn btn-primary"
+              onclick="addNewPhone()"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="editPhoneModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Edit Phone data
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body d-flex flex-column gap-4">
+            <input
+              class="form-control"
+              id="phoneInputName2"
+              type="text"
+              placeholder="Enter your phone name"
+            />
+            <input
+              class="form-control"
+              id="phoneInputPrice2"
+              type="number"
+              placeholder="Enter your phone price"
+            />
+            <input
+              class="form-control"
+              id="phoneInputQty2"
+              type="number"
+              placeholder="Enter your phone qty"
+            />
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="btn btn-primary"
+              onclick="saveEdits()"
+            >
+              Save Edits
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./products.js"></script>
+  </body>
+</html>
