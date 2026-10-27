@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body style="height: 100vh;" class="d-flex justify-content-center align-items-center">
+    <form onsubmit="login(event)" class="bg-white shadow rounded border gap-3 col-4 p-4 d-flex flex-column">
+        <h3>Welcome Back, Please Login</h3>
+        <input id="email" class="form-control col-12" type="email" placeholder="Enter your email" required>
+        <input id="password" class="form-control col-12" type="password" placeholder="Enter your password" required>
+        <button class="btn btn-primary">Login</button>
+    </form>
+    <script src="./login.js"></script>
+  </body>
+</html>

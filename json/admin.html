@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg-info text-dark  col-12 py-3 d-flex justify-content-between align-items-center">
+        <h1 class="text-center">Admin Page</h1>
+        <button onclick="logout()" class="btn btn-danger">Logout</button>
+      </div>
+      <button
+        class="btn btn-success"
+        data-bs-toggle="modal"
+        data-bs-target="#newPhoneModal"
+      >
+        Add New Phone
+      </button>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Img Link</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div
+      class="modal fade"
+      id="newPhoneModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Add New Phone
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-12 d-flex flex-column gap-3">
+              <input
+                id="newPhoneInputName"
+                class="form-control"
+                type="text"
+                placeholder="Enter new phone name"
+              />
+              <input
+                id="newPhoneInputPrice"
+                class="form-control"
+                type="text"
+                placeholder="Enter new phone price"
+              />
+              <input
+                id="newPhoneInputImgSrc"
+                class="form-control"
+                type="text"
+                placeholder="Enter new phone img link"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="btn btn-primary"
+              onclick="addNewPhone()"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="editPhoneModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Edit Phone Data
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="col-12 d-flex flex-column gap-3">
+              <input
+                id="editPhoneInputName"
+                class="form-control"
+                type="text"
+                placeholder="Enter new phone name"
+              />
+              <input
+                id="editPhoneInputPrice"
+                class="form-control"
+                type="text"
+                placeholder="Enter new phone price"
+              />
+              <input
+                id="editPhoneInputImgSrc"
+                class="form-control"
+                type="text"
+                placeholder="Enter new phone img link"
+              />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              data-bs-dismiss="modal"
+              type="button"
+              class="btn btn-primary"
+              onclick="savePhoneEdits()"
+            >
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./admin.js"></script>
+  </body>
+</html>
